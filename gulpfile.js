@@ -7,17 +7,27 @@ const gulp = require('gulp'),
   babel = require('gulp-babel'),
   browserSync = require('browser-sync').create();
 
-const distDir = 'dist',
+var distDir = 'dist',
+  buildDir = 'docs',
   srcDir = 'src';
 
 
 gulp.task('css', () => {
   return gulp.src(`${srcDir}/sass/**/*.scss`)
     .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }).on('error', sass.logError))
-    //.pipe(purify([`${srcDir}/js/**/*.js`, `${srcDir}/*.html`]))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write(`./maps`))
+    .pipe(gulp.dest(`${distDir}/css`))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('css+purify', () => {
+  return gulp.src(`${srcDir}/sass/**/*.scss`)
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(purify([`${srcDir}/js/**/*.js`, `${srcDir}/*.html`], {
+      minify: true
+    }))
     .pipe(sourcemaps.write(`./maps`))
     .pipe(gulp.dest(`${distDir}/css`))
     .pipe(browserSync.stream());
@@ -39,6 +49,11 @@ gulp.task('html', () => {
     .pipe(gulp.dest(distDir));
 });
 
+gulp.task('fonts', () => {
+  return gulp.src(`${srcDir}/fonts/**/*.*`)
+    .pipe(gulp.dest(`${distDir}/fonts`));
+});
+
 gulp.task('img', () => {
   return gulp.src(`${srcDir}/img/**/*.+(jpg|jpeg|png|svg|gif)`)
     .pipe(imagemin())
@@ -53,6 +68,8 @@ gulp.task('server', () => {
   });
 });
 
+gulp.task('copy', ['html', 'fonts', 'img']);
+
 gulp.task('watch', () => {
   gulp.watch(`${srcDir}/sass/**/*.scss`, ['css']);
   gulp.watch(`${srcDir}/js/**/*.js`, ['js']);
@@ -61,4 +78,9 @@ gulp.task('watch', () => {
   gulp.watch(`${srcDir}/**/*.+(html|js)`).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['css','js','html','img','watch','server']);
+gulp.task('default', ['css', 'js', 'copy', 'watch', 'server']);
+gulp.task('dev', ['css', 'js', 'copy', 'watch', 'server']);
+gulp.task('build', () => {
+  distDir = buildDir;
+  gulp.start(['css+purify', 'js', 'copy']);
+});
