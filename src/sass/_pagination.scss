@@ -1,0 +1,17 @@
+.pagination {
+  list-style-type: none;
+}
+
+.pagination__button {
+  display: block;
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.pagination__radio:checked + .pagination__button {
+    background-color: $primaryColor;
+}

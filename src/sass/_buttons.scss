@@ -1,0 +1,50 @@
+.button {
+  display: inline-block;
+  padding: 13/16*1rem 26/16*1rem;
+  border-radius: 2px;
+  background-color: $defaultButton;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14/16*1rem;
+  transition: 250ms;
+
+  &:hover {
+    background: darken($defaultButton,10%);
+  }
+
+  &--outline {
+    @extend .button;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $defaultButton;
+    background: none;
+    color: $defaultButton;
+    padding-top: 12/16*1rem;
+    padding-bottom: 12/16*1rem;
+
+    &:hover {
+      background: $defaultButton;
+      color: #ffffff;
+    }
+  }
+
+  &--primary {
+    @extend .button;
+    border-color: $primaryColor;
+    background-color: $primaryColor;
+
+    &:hover {
+      background: darken($primaryColor,10%);
+    }
+
+    &.button--outline {
+      background: none;
+      color: $primaryColor;
+
+      &:hover {
+        background: $primaryColor;
+        color: #ffffff;
+      }
+    }
+  }
+}

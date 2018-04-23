@@ -1,0 +1,49 @@
+@media only screen and (max-width: 62em) {
+  .services {
+    padding: {
+      top: 8vh;
+      bottom: 8vh;
+    }
+  }
+
+  .services__wrapper {
+    margin: {
+      top: 2rem;
+      bottom: 2rem;
+    }
+  }
+}
+
+.service {
+  height: 30vh;
+  border: 1px solid #e8ebee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  &:first-child {
+    border-bottom: none;
+  }
+
+  &:nth-child(2) {
+    border-bottom: none;
+    border-left: none;
+  }
+
+  &:last-child {
+    border-left: none;
+  }
+  @media only screen and (max-width: 62em) {
+    height: 22vh;
+  }
+}
+
+.service__title {
+  font-family: 'Dosis',sans-serif;
+  color: #3d3d3d;
+  font-size: 14/16*1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}

@@ -1,0 +1,35 @@
+.industries {
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  min-height: 80vh;
+}
+
+.industry {
+  height: 170px;
+  border: 1px solid #e8ebee;
+  margin-bottom: 30/16 * 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media only screen and (max-width: 62em) {
+    height: 140px;
+  }
+}
+
+.industry__name {
+  font-family: 'Dosis',sans-serif;
+  color: $titleColor;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.industries__line {
+  @extend .line;
+  @media only screen and (max-width: 62em) {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+}

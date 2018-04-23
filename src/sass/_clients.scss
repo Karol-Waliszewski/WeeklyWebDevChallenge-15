@@ -1,0 +1,49 @@
+.clients {
+  padding: {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  & > .container > .row {
+    min-height: 110px;
+  }
+}
+
+.clients__heading {
+  font-family: 'Dosis',sans-serif;
+  color: #000000;
+  font-size: 24/16 *1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.clients__link {
+  color: $primaryColor;
+  font-size: 13/16*1rem;
+  font-weight: 400;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    color: darken($primaryColor, 10%);
+
+    .clients__link::after {
+      border-left: 4px solid darken($primaryColor, 10%);
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid $primaryColor;
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+  }
+}

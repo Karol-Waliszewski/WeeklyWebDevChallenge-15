@@ -1,0 +1,83 @@
+.header {
+  height: 100vh;
+}
+
+.header__background {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.header__background--pattern {
+  background-image: url("/img/background--left.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.header__background--pagination {
+  background: $defaultButton;
+}
+
+.header__content {
+  height: 100%;
+
+  & > .row {
+    height: 100%;
+  }
+}
+
+.header__title {
+  font-family: 'Dosis', sans-serif;
+  color: $headerTextColor;
+  font-size: 90/16*1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header__subtitle {
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  color: $headerTextColor;
+  font-size: 50/16*1rem;
+  font-weight: 700;
+  margin-top: -1.5rem;
+}
+
+.header__line {
+  background-color: $headerTextColor;
+  border-radius: 5px;
+  width: 74px;
+  height: 6px;
+  border: none;
+  margin-top: 1.75rem;
+  margin-bottom: 2.25rem;
+}
+
+.header__text {
+  color: $headerTextColor;
+  line-height: 40/16*1rem;
+}
+
+.header__down {
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgba(255, 255, 255, 10);
+  background-color: #ffffff;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: absolute;
+  bottom: calc(1rem + 1vh);
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  &:focus {
+    outline: #000 1px solid;
+  }
+  &--text {
+    display: block;
+    transform: rotate(-45deg);
+  }
+}

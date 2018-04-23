@@ -1,0 +1,42 @@
+.work {
+  background-color: #23232a;
+  color: #fff;
+  padding: {
+    top: 10vh;
+    bottom: 10vh;
+  }
+
+  & > .container > .row {
+    min-height: 80vh;
+  }
+}
+
+.work__heading {
+  font-family: 'Dosis',sans-serif;
+  color: #ffffff;
+  font-size: 40/16*1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.work__content {
+  color: #878796;
+  font-size: 14/16 *1rem;
+  line-height: 1.7rem;
+}
+
+.work__subheading {
+  font-family: 'Dosis',sans-serif;
+  color: #ffffff;
+  font-size: 34/16*1rem;
+  font-weight: 700;
+}
+
+.work__line {
+  background: none;
+  border: none;
+  border-top: darken(#878796,10%) 1px dashed;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}

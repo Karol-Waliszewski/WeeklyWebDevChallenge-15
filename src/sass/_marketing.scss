@@ -1,0 +1,11 @@
+.marketing {
+  background-color: #f1f1f1;
+  padding: {
+    top: 10vh;
+    bottom: 10vh;
+  }
+
+  & > .container > .row {
+    min-height: 70vh;
+  }
+}

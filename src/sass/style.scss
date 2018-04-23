@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,500,700|Open+Sans:400,700');
+@import "variables";
+@import 'layout';
+@import "others";
+@import 'buttons';
+@import 'nav';
+@import 'header';
+@import 'pagination';
+@import 'clients';
+@import 'about';
+@import 'services';
+@import 'industries';
+@import 'marketing';
+@import 'work';
+@import 'projects';
+@import 'blog';
+@import 'post';
+@import 'footer';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
