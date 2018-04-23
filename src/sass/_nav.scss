@@ -2,18 +2,21 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 55px;
-  & > .container {
-    height: 100%;
-  }
+  transition: 200ms;
+  color: #fff;
 
   & > .container > .row {
-    height: 100%;
+    transition: 250ms;
+    height: 80px;
   }
 }
 
 .nav__brand {
-  height: 46px;
+  display: block;
+  height: 55%;
+  img {
+    height: 100%;
+  }
 }
 
 .nav__item {
@@ -26,11 +29,21 @@
 }
 
 .nav__link {
-  color: #fff;
+  color: inherit;
+  display: block;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 13/16*1rem;
   font-weight: 500;
   font-family: inherit;
+}
+
+.nav.active {
+  background: #fff;
+  color: $defaultButton;
+
+  & > .container > .row {
+    height: 60px;
+  }
 }

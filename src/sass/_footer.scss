@@ -7,6 +7,7 @@
 }
 
 .footer__title {
+  display: block;
   font-family: 'Dosis',sans-serif;
   color: #3d3d3d;
   font-size: 1rem;
@@ -44,6 +45,22 @@
   }
 }
 
+.footer__control {
+  background: #fff;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
 .footer__input {
-  max-width: 100%;
+  flex-grow: 1;
+  border: none;
+  text-indent: 0.5rem;
+  height: 100%;
+}
+
+.footer__icon {
+  flex-shrink: 1;
+  margin: 0 0.5rem;
 }
