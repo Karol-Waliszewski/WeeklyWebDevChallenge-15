@@ -9,3 +9,25 @@
     min-height: 70vh;
   }
 }
+
+.marketing__mockup {
+  position: relative;
+}
+
+.marketing__image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  left: -4%;
+  transform: scale(1.1);
+  @media only screen and (min-width: 48em) {
+    height: 100%;
+    width: auto;
+    left: 50%;
+    transform: translateX(-54%);
+  }
+}
+
+.marketing__content {
+  z-index: 2;
+}

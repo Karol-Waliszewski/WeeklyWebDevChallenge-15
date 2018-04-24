@@ -16,9 +16,14 @@
     height: 140px;
   }
 }
-.industry__icon{
+
+.industry__icon {
   margin-bottom: 1.5vh;
+  @media only screen and (max-width: 48em) {
+    height: 25%;
+  }
 }
+
 .industry__name {
   font-family: 'Dosis',sans-serif;
   color: $titleColor;

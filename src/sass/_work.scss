@@ -31,6 +31,10 @@
   color: #ffffff;
   font-size: 34/16*1rem;
   font-weight: 700;
+  @media only screen and (max-width: 48em) {
+    margin-top: 12vh;
+    font-size: 30/16*1rem;
+  }
 }
 
 .work__line {
