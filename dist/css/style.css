@@ -2073,7 +2073,9 @@
 .nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  z-index: 50;
+  width: 100vw;
   transition: 200ms;
   color: #fff; }
   .nav > .container > .row {
@@ -2277,6 +2279,9 @@
     .service {
       height: 22vh; } }
 
+.service__icon {
+  margin-bottom: 2vh; }
+
 .service__title {
   font-family: 'Dosis',sans-serif;
   color: #3d3d3d;
@@ -2300,6 +2305,9 @@
   @media only screen and (max-width: 62em) {
     .industry {
       height: 140px; } }
+
+.industry__icon {
+  margin-bottom: 1.5vh; }
 
 .industry__name {
   font-family: 'Dosis',sans-serif;
@@ -2479,6 +2487,11 @@
   padding-top: 6vh;
   padding-bottom: 6vh; }
 
+@media only screen and (max-width: 48em) {
+  .footer__section {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; } }
+
 .footer__title {
   display: block;
   font-family: 'Dosis',sans-serif;
@@ -2520,7 +2533,7 @@
   align-items: center; }
 
 .footer__input {
-  flex-grow: 1;
+  width: 100%;
   border: none;
   text-indent: 0.5rem;
   height: 100%; }

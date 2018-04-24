@@ -6,6 +6,15 @@
   }
 }
 
+.footer__section {
+  @media only screen and (max-width: 48em) {
+    margin: {
+      top: 1.5rem;
+      bottom: 1.5rem;
+    }
+  }
+}
+
 .footer__title {
   display: block;
   font-family: 'Dosis',sans-serif;
@@ -54,7 +63,7 @@
 }
 
 .footer__input {
-  flex-grow: 1;
+  width: 100%;
   border: none;
   text-indent: 0.5rem;
   height: 100%;
