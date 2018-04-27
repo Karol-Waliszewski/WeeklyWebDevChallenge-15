@@ -19,6 +19,10 @@
 
 .header__background--pagination {
   background: $defaultButton;
+  background-image: url("../img/header__background.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1);
 }
 
 .header__content {
@@ -35,6 +39,9 @@
   font-size: 90/16*1rem;
   font-weight: 700;
   text-transform: uppercase;
+  @media only screen and (max-width: 48em) {
+    font-size: 70/16*1rem;
+  }
 }
 
 .header__subtitle {
@@ -44,6 +51,10 @@
   font-size: 50/16*1rem;
   font-weight: 700;
   margin-top: -1.5rem;
+  @media only screen and (max-width: 48em) {
+    font-size: 30/16*1rem;
+    margin-top: -0.5rem;
+  }
 }
 
 .header__line {
@@ -59,6 +70,9 @@
 .header__text {
   color: $headerTextColor;
   line-height: 40/16*1rem;
+  @media only screen and (max-width: 48em) {
+    line-height: 30/16*1rem;
+  }
 }
 
 .header__down {

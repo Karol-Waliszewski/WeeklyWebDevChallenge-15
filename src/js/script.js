@@ -11,5 +11,5 @@ const navModule = (function() {
 
   document.getElementById('burger').addEventListener('click', function() {
     $nav.classList.toggle('active');
-  })
+  });
 })();

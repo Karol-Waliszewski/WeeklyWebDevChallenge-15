@@ -2181,7 +2181,11 @@
   background-size: cover; }
 
 .header__background--pagination {
-  background: #363636; }
+  background: #363636;
+  background-image: url("../img/header__background.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1); }
 
 .header__content {
   height: 100%; }
@@ -2194,6 +2198,9 @@
   font-size: 5.625rem;
   font-weight: 700;
   text-transform: uppercase; }
+  @media only screen and (max-width: 48em) {
+    .header__title {
+      font-size: 4.375rem; } }
 
 .header__subtitle {
   font-family: 'Dosis', sans-serif;
@@ -2202,6 +2209,10 @@
   font-size: 3.125rem;
   font-weight: 700;
   margin-top: -1.5rem; }
+  @media only screen and (max-width: 48em) {
+    .header__subtitle {
+      font-size: 1.875rem;
+      margin-top: -0.5rem; } }
 
 .header__line {
   background-color: #ffffff;
@@ -2215,6 +2226,9 @@
 .header__text {
   color: #ffffff;
   line-height: 2.5rem; }
+  @media only screen and (max-width: 48em) {
+    .header__text {
+      line-height: 1.875rem; } }
 
 .header__down {
   border-style: solid;
@@ -2305,7 +2319,7 @@
   background-color: #f8f8f8; }
   @media (min-width: 1000px) {
     .about {
-      background-image: url("/img/about__background.png");
+      background-image: url("../img/about__background.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: left; } }
