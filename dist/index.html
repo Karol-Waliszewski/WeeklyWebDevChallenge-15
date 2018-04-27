@@ -17,7 +17,7 @@
         <a href="/" class="nav__brand col"><img class="" src="img/nav__logo.png" alt="Agency's logo"></a>
         <div class="col">
           <ul class="row nav__links">
-            <li class="nav__item col"><a href="/" class="nav__link">Home</a></li>
+            <li class="nav__item col"><a href="/" class="nav__link active">Home</a></li>
             <li class="nav__item col"><a href="#" class="nav__link">Works</a></li>
             <li class="nav__item col"><a href="#" class="nav__link">Industries</a></li>
             <li class="nav__item col"><a href="#" class="nav__link">Services</a></li>
@@ -25,6 +25,9 @@
             <li class="nav__item col"><a href="#" class="nav__link">Who we are</a></li>
             <li class="nav__item col"><a href="#" class="nav__link">Contact</a></li>
           </ul>
+        </div>
+        <div class="col nav__mobile">
+          <button class="nav__burger" id="burger">&#9776;</button>
         </div>
       </div>
     </div>
@@ -45,7 +48,7 @@
           <hr class="header__line">
           <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dicta expedita magni, in provident aliquam nulla eveniet aperiam nostrum ut, omnis rem quidem ullam asperiores iste veniam enim earum itaque?</p>
         </div>
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-6 col-xs-12 header__pagination">
           <ul class="pagination">
             <li>
               <input type="radio" name="backgroundImage" id="backgroundImage1" class="pagination__radio hidden">
@@ -170,21 +173,21 @@
             </header>
             <hr class="work__line">
             <dl>
-              <div>
-                <dt>Client</dt>
-                <dd>Customer</dd>
+              <div class="details">
+                <dt class="details__title">Client</dt>
+                <dd class="details__desc">Customer</dd>
               </div>
-              <div>
-                <dt>Location</dt>
-                <dd>UK</dd>
+              <div class="details">
+                <dt class="details__title">Location</dt>
+                <dd class="details__desc">UK</dd>
               </div>
-              <div>
-                <dt>Services</dt>
-                <dd>Search Engine Optimization</dd>
+              <div class="details">
+                <dt class="details__title">Services</dt>
+                <dd class="details__desc">Search Engine Optimization</dd>
               </div>
-              <div>
-                <dt>Website Link</dt>
-                <dd><a href="#">www.CustomerDomain.com</a></dd>
+              <div class="details">
+                <dt class="details__title">Website Link</dt>
+                <dd class="details__desc"><a href="#" class="details__link">www.CustomerDomain.com</a></dd>
               </div>
             </dl>
           </article>
@@ -200,8 +203,10 @@
               <header>
                 <img src="img/brand__1.png" alt="Opportunity Network's logo" class="project__brand">
               </header>
-              <p class="project__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptatem molestias qui vel illum sequi ullam laboriosam voluptates modi unde, deleniti fugiat totam, odit iure quo debitis perferendis dicta quaerat.</p>
-              <footer><a href="#" class="project__link">View details</a></footer>
+              <div class="project__more">
+                <p class="project__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptatem molestias qui vel illum sequi ullam laboriosam voluptates modi unde, deleniti fugiat totam, odit iure quo debitis perferendis dicta quaerat.</p>
+                <footer><a href="#" class="project__link">View details</a></footer>
+              </div>
             </article>
           </div>
           <div class="col-md-4 col-xs-12">
@@ -209,8 +214,10 @@
               <header>
                 <img src="img/brand__2.png" alt="Ivivu's logo" class="project__brand">
               </header>
-              <p class="project__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptatem molestias qui vel illum sequi ullam laboriosam voluptates modi unde, deleniti fugiat totam, odit iure quo debitis perferendis dicta quaerat.</p>
-              <footer><a href="#" class="project__link">View details</a></footer>
+              <div class="project__more">
+                <p class="project__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptatem molestias qui vel illum sequi ullam laboriosam voluptates modi unde, deleniti fugiat totam, odit iure quo debitis perferendis dicta quaerat.</p>
+                <footer><a href="#" class="project__link">View details</a></footer>
+              </div>
             </article>
           </div>
           <div class="col-md-4 col-xs-12">
@@ -218,8 +225,10 @@
               <header>
                 <img src="img/brand__3.png" alt="future think's logo" class="project__brand">
               </header>
-              <p class="project__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptatem molestias qui vel illum sequi ullam laboriosam voluptates modi unde, deleniti fugiat totam, odit iure quo debitis perferendis dicta quaerat.</p>
-              <footer><a href="#" class="project__link">View details</a></footer>
+              <div class="project__more">
+                <p class="project__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptatem molestias qui vel illum sequi ullam laboriosam voluptates modi unde, deleniti fugiat totam, odit iure quo debitis perferendis dicta quaerat.</p>
+                <footer><a href="#" class="project__link">View details</a></footer>
+              </div>
             </article>
           </div>
           <div class="col-md-3 col-xs-8">
@@ -425,7 +434,7 @@
             <label for="newsletter" class="footer__title">Subscribe to our mailing list</label>
             <div class="footer__control">
               <input class="footer__input" type="text" id="newsletter" placeholder="Enter your email">
-              <span class="footer__icon">Icon</span>
+              <div class="footer__icon"><img src="img/mail.svg" alt="mail icon"></div>
             </div>
           </form>
         </div>

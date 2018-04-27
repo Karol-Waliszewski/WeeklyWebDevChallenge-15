@@ -4,8 +4,12 @@ const navModule = (function() {
   document.addEventListener('scroll', function() {
     let offset = window.scrollY;
     if (offset > 60)
-      $nav.classList.add('active');
+      $nav.classList.add('scroll');
     else
-      $nav.classList.remove('active');
+      $nav.classList.remove('scroll');
   });
+
+  document.getElementById('burger').addEventListener('click', function() {
+    $nav.classList.toggle('active');
+  })
 })();

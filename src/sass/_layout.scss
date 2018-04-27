@@ -1,14 +1,16 @@
 @import '../../node_modules/flexboxgrid-sass/flexboxgrid.scss';
 
 .container {
+  max-width: 100%;
   margin: {
     right: auto;
     left: auto;
   }
   padding: {
-      left: 2rem;
-      right: 2rem;
-    }
+    left: 2rem;
+    right: 2rem;
+  }
+
   & > .row {
     @media only screen and (min-width: 62em) {
       margin: {

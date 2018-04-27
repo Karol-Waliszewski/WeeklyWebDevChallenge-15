@@ -1,7 +1,9 @@
 .clients {
-  padding: {
-    top: 2rem;
-    bottom: 2rem;
+  @media only screen and (max-width: 48em) {
+    padding: {
+      top: 2rem;
+      bottom: 2rem;
+    }
   }
 
   & > .container > .row {

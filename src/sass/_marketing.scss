@@ -8,6 +8,11 @@
   & > .container > .row {
     min-height: 70vh;
   }
+  @media only screen and (max-width: 48em) {
+    & > .container > .row {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 .marketing__mockup {
@@ -20,9 +25,12 @@
   height: auto;
   left: -4%;
   transform: scale(1.1);
+  display: block;
+  @media only screen and (max-width: 48em) {
+    margin-top: 10vh;
+  }
   @media only screen and (min-width: 48em) {
     height: 100%;
-    width: auto;
     left: 50%;
     transform: translateX(-54%);
   }

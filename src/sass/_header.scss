@@ -73,11 +73,22 @@
   bottom: calc(1rem + 1vh);
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
+
   &:focus {
     outline: #000 1px solid;
   }
+
   &--text {
     display: block;
     transform: rotate(-45deg);
+  }
+}
+@media only screen and (max-width:48em) {
+  .header__background--pagination {
+    display: none;
+  }
+
+  .header__pagination {
+    display: none;
   }
 }

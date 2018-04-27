@@ -64,6 +64,8 @@
   padding: {
     left: 10%;
     right: 10%;
+    top: 5%;
+    bottom: 5%;
   };
 
   &:hover {
@@ -75,45 +77,42 @@
       filter: brightness(0);
     }
 
-    .project__link {
+    .project__more {
       height: auto;
-    }
-
-    .project__content {
-      height: auto;
+      max-height: 500px;
     }
   }
-  @media only screen and (max-width: 47.99em) {
+  @media only screen and (max-width: 48em) {
     background-color: #f8f8f8;
     color: darken(#23232a,5%);
+    min-height: 250px;
+    height: auto;
 
     .project__brand {
       margin-bottom: 1rem;
       filter: brightness(0);
     }
 
-    .project__link {
-      height: auto;
-    }
-
-    .project__content {
-      height: auto;
+    .project__more {
+      max-height: 300px;
+      transition: max-height 250ms ease-in;
     }
   }
 }
 
-.project__content {
-  height: 1px;
+.project__more {
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 150ms ease-out;
+}
+
+.project__content {
   font-size: 14px;
   text-align: center;
   color: #878796;
-  transition: 250ms;
 }
 
 .project__link {
-  height: 1px;
-  overflow: hidden;
   color: $primaryColor;
   text-decoration: none;
   display: block;
